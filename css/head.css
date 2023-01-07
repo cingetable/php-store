@@ -1,0 +1,122 @@
+/*Стили шапки*/
+header {
+	height: 100px;
+	width: 100%;
+	border-bottom: 2px solid #361A00;
+	display: flex;
+	justify-content: center;
+}
+.container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.home {
+	width: 15%;
+}
+.home img {
+	width: 24px;
+	height: 24px;
+}
+.home img:hover {
+	cursor: pointer;
+}
+.bar {
+	width: 30%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.bar .main {
+	width: 60%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #361A00;
+	color: #fff;
+	height: 50px;
+	border-radius: 50px;
+	padding: 20px;
+}
+.bar .main p {
+	padding: 0 10px;
+}
+.bar .main div {
+	padding: 0 10px;
+}
+.bar .main:hover {
+	 cursor: pointer;
+ }
+.bar .lang {
+	display: flex;
+	flex-direction: row;
+	width: 10%;
+	justify-content: space-between;
+}
+.bar .lang div:hover {
+	 cursor: pointer;
+}
+.bar .basfav {
+	width: 12%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.bar .basfav img {
+	width: 24px;
+	height: 24px;
+}
+.bar .basfav img:hover {
+	 cursor: pointer;
+ }
+.search {
+	border: 1px solid #361A00;
+	border-radius: 50px;
+	height: 50px;
+	width: 15%;
+	padding: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+.search input {
+	width: 70%;
+	background: #F0EDE9;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.search img {
+	width: 24px;
+	height: 24px;
+}
+.active {
+	font-weight: bold;
+}
+/*Стили шапки*/
+
+/*Адаптация*/
+@media (max-width: 1680px) {
+	.home {
+		width: 20%;
+	}
+	.bar {
+		width: 50%;
+	}
+	.search {
+		width: 20%;
+	}
+}
+@media (max-width: 1200px) {
+	.bar {
+		width: 55%;
+	}
+}
+@media (max-width: 425px) {
+
+}
+/*Адаптация*/
