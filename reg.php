@@ -40,7 +40,7 @@ session_start();
 				</div>
 				<div class="form_btn">
 					<button type="submit">Зарегистрироваться</button>
-					<a href="#"><p>Войти</p></a>
+					<a href="auth.php"><p>Войти</p></a>
 				</div>
 			</form>
 		</section>
