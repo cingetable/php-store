@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,9 +9,6 @@
 	<!--Обнуление стилей-->
 	<link rel="stylesheet" href="css/index.css">
 	<!--Обнуление стилей-->
-	<!--Стили для шапки-->
-	<link rel="stylesheet" href="css/head.css">
-	<!--Стили для шапки-->
 	<!--Стили для страницы-->
 	<link rel="stylesheet" href="css/reg.css">
 	<!--Стили для страницы-->
@@ -20,10 +21,6 @@
 	<title>регистрация</title>
 </head>
 <body>
-<!--Шапка-->
-
-<!--Шапка-->
-
 <!--Регистрация-->
 	<main>
 		<section class="_container">
@@ -34,15 +31,15 @@
 		</section>
 		<div class="reg_line"></div>
 		<section class="_container">
-			<form action="#" class="reg_form">
+			<form action="vendor/signup.php" class="reg_form" method="post">
 				<div class="form_in">
 					<p class="title">Регистрация</p>
-					<input type="text" placeholder="Почти или телефон">
-					<input type="text" placeholder="Пароль">
-					<input type="text" placeholder="Подтверждение пароля">
+					<input type="text" placeholder="Почти или телефон" name="login">
+					<input type="password" placeholder="Пароль" name="password">
+					<input type="password" placeholder="Подтверждение пароля" name="password_confirm">
 				</div>
 				<div class="form_btn">
-					<button>Зарегистрироваться</button>
+					<button type="submit">Зарегистрироваться</button>
 					<a href="#"><p>Войти</p></a>
 				</div>
 			</form>
