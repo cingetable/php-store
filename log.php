@@ -13,7 +13,7 @@ session_start();
 <!--	<link rel="stylesheet" href="head.css">-->
 	<!--Стили для шапки-->
 	<!--Стили для страницы-->
-	<link rel="stylesheet" href="css/reg.css">
+	<link rel="stylesheet" href="css/log.css">
 	<!--Стили для страницы-->
 	<!--Для корректной работы медиа запросов-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,29 +28,28 @@ session_start();
 </head>
 <body>
 <!--Регистрация-->
-	<main>
-		<section class="_container">
-			<div class="reg_title">
-				<p class="title">YOUR MATTERS</p>
-				<p class="desc">comfort that everyone needs</p>
+<main>
+	<section class="_container">
+		<div class="reg_title">
+			<p class="title">YOUR MATTERS</p>
+			<p class="desc">comfort that everyone needs</p>
+		</div>
+	</section>
+	<div class="reg_line"></div>
+	<section class="_container">
+		<form action="vendor/signin.php" class="reg_form" method="post">
+			<div class="form_in">
+				<p class="title">Вход</p>
+				<input type="text" placeholder="Логин" name="login">
+				<input type="text" placeholder="Пароль" name="password">
 			</div>
-		</section>
-		<div class="reg_line"></div>
-		<section class="_container">
-			<form action="vendor/signup.php" class="reg_form" method="post">
-				<div class="form_in">
-					<p class="title">Регистрация</p>
-					<input type="text" placeholder="Логин" name="login">
-					<input type="password" placeholder="Пароль" name="password">
-					<input type="password" placeholder="Подтверждение пароля" name="password_confirm">
-				</div>
-				<div class="form_btn">
-					<button type="submit">Зарегистрироваться</button>
-					<a href="log.php"><p>Войти</p></a>
-				</div>
-			</form>
-		</section>
-	</main>
+			<div class="form_btn">
+				<button type="submit">Войти</button>
+				<a href="reg.php"><p>Зарегистрироваться</p></a>
+			</div>
+		</form>
+	</section>
+</main>
 <!--Регистрация-->
 </body>
 </html>

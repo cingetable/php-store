@@ -1,3 +1,29 @@
+/*Подключение шрифтов*/
+@font-face {
+	font-family: "Sevillana";
+	src: url("../fonts/Sevillana/Sevillana-Regular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: "Monoton";
+	src: url("../Monoton/Monoton-Regular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: "Montserrat";
+	src: url("../fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: "MontserratItalic";
+	src: url("../fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+/*Подключение шрифтов*/
 /*Обнуление стилей*/
 * {
 	padding: 0;
@@ -62,7 +88,6 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: inherit;
 }
 /*Обнуление стилей*/
-
 /*Контейнер*/
 ._container {
 	width: 1680px;
@@ -78,7 +103,12 @@ h1, h2, h3, h4, h5, h6 {
 		width: 800px;
 	}
 }
-@media (max-width: 425px) {
+@media (max-width: 992px) {
+	._container {
+		width: 700px;
+	}
+}
+@media (max-width: 768px) {
 	._container {
 		width: 100%;
 	}

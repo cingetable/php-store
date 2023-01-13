@@ -46,6 +46,7 @@ main {
 	border-radius: 50px;
 	width: 30%;
 	height: 400px;
+	padding: 0 0 50px;
 }
 .form_in .title {
 	font-size: 36px;
@@ -146,7 +147,7 @@ main {
 	}
 	.form_in {
 		width: 80%;
-		height: 350px;
+		height: 300px;
 	}
 	.reg_title {
 		padding: 20px 10px;
