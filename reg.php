@@ -37,20 +37,22 @@ session_start();
 		</section>
 		<div class="reg_line"></div>
 		<section class="_container">
-			<form action="vendor/signup.php" class="reg_form" method="post">
+			<form  class="reg_form" action="vendor/signup.php" method="post">
 				<div class="form_in">
-					<p class="title">Регистрация</p>
+                    <p class="title">Регистрация</p>
 					<input type="text" placeholder="Логин" name="login">
-					<input type="password" placeholder="Пароль" name="password">
-					<input type="password" placeholder="Подтверждение пароля" name="password_confirm">
+					<input type="text" placeholder="Пароль" name="password">
+					<input type="text" placeholder="Подтверждение пароля" name="password_confirm">
 				</div>
 				<div class="form_btn">
-					<button type="submit">Зарегистрироваться</button>
+					<button type="submit" class="reg-btn">Зарегистрироваться</button>
 					<a href="log.php"><p>Войти</p></a>
 				</div>
 			</form>
 		</section>
 	</main>
 <!--Регистрация-->
+<script src="js/jquery.js"></script>
+<script src="js/reg.js"></script>
 </body>
 </html>

@@ -44,12 +44,14 @@ session_start();
 				<input type="text" placeholder="Пароль" name="password">
 			</div>
 			<div class="form_btn">
-				<button type="submit">Войти</button>
+				<button type="submit" class="log_btn">Войти</button>
 				<a href="reg.php"><p>Зарегистрироваться</p></a>
 			</div>
 		</form>
 	</section>
 </main>
 <!--Регистрация-->
+<script src="js/jquery.js"></script>
+<script src="js/log.js"></script>
 </body>
 </html>

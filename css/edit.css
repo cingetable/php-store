@@ -1,0 +1,291 @@
+main {
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.main_title {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	padding: 20px 0 0;
+}
+.main_title .title {
+	font-size: 88px;
+	font-family: 'Monoton', cursive;
+}
+.main_title .desc {
+	font-family: 'Sevillana', cursive;
+	font-size: 31px;
+}
+.main_break {
+	height: 100px;
+}
+.container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.card {
+	width: 100%;
+}
+.card .line {
+	width: 100%;
+	height: 2px;
+	background: #361A00;
+}
+.card .all {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-self: center;
+}
+.card .all .left {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.card .all .right{
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+.card .all .left {
+	width: 40%;
+}
+.card .all .left .img {
+	padding-left: 10px;
+	width: 40%;
+}
+.card .all .left .img img {
+	width: 100%;
+	border: 2px solid #361A00;
+	border-radius: 10px;
+}
+.card .all .left p {
+	align-self: flex-start;
+	font-size: 48px;
+	padding-left: 10px;
+}
+.card .all .right {
+	width: 30%;
+	font-size: 40px;
+}
+.card .all .right button {
+	width: 70px;
+}
+.edit {
+	padding: 10px 0 30px;
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.form_in {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	width: 30%;
+	height: 240px;
+}
+.form_in .title {
+	font-size: 36px;
+}
+.form_in label {
+	cursor: pointer;
+}
+.form_in input, .form_in label {
+	width: 100%;
+	font-size: 31px;
+	background: #F0EDE9;
+	border-bottom: 1px solid black;
+}
+.form_btn {
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	height: 110px;
+	width: 30%;
+}
+.form_btn button {
+	height: 50px;
+	color: white;
+	background: #361A00;
+	border-radius: 50px;
+	width: 100%;
+	font-size: 28px;
+}
+.form_btn a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+	color: #361A00;
+	border-radius: 50px;
+	border: 1px solid #361A00;
+	width: 100%;
+}
+.form_btn a p {
+	font-size: 28px;
+}
+@media (max-width: 1680px) {
+	.card .all .left {
+		width: 50%;
+	}
+	.card .all .left p {
+		font-size: 40px;
+	}
+	.card .all .right {
+		font-size: 32px;
+	}
+	.card .all .right button {
+		width: 60px;
+	}
+}
+@media (max-width: 1200px) {
+	.form_btn button {
+		height: 45px;
+		font-size: 22px;
+	}
+	.form_btn a {
+		height: 45px;
+	}
+	.form_btn a p {
+		font-size: 22px;
+	}
+	.form_in input, .form_in label {
+		font-size: 25px;
+	}
+	.main_break {
+		height: 80px;
+	}
+	.main_title .title {
+		font-size: 58px;
+		width: 60%;
+	}
+	.main_title .desc {
+		font-size: 27px;
+		width: 30%;
+	}
+	.card .all .left {
+		width: 60%;
+	}
+	.card .all .left p {
+		font-size: 32px;
+	}
+	.card .all .right {
+		width: 30%;
+		font-size: 22px;
+	}
+	.card .all .right button {
+		width: 50px;
+	}
+}
+@media (max-width: 992px) {
+	.form_btn {
+		height: 100px;
+	}
+	.form_btn button {
+		height: 45px;
+		font-size: 22px;
+	}
+	.form_btn a {
+		height: 45px;
+	}
+	.form_btn a p {
+		font-size: 22px;
+	}
+	.form_in {
+		height: 150px;
+	}
+	.form_in input, .form_in label {
+		font-size: 20px;
+	}
+	.main_break {
+		height: 70px;
+	}
+	.main_title .title {
+		font-size: 50px;
+		width: 60%;
+	}
+	.main_title .desc {
+		font-size: 23px;
+		width: 30%;
+	}
+}
+@media (max-width: 768px) {
+	.edit {
+		flex-direction: column;
+	}
+	.form_btn {
+		width: 80%;
+		height: 120px;
+	}
+	.form_btn button {
+		height: 55px;
+		font-size: 22px;
+	}
+	.form_btn a {
+		height: 55px;
+	}
+	.form_btn a p {
+		font-size: 22px;
+	}
+	.form_in {
+		width: 80%;
+		height: 200px;
+	}
+	.form_in input, .form_in label {
+		font-size: 20px;
+	}
+	.card .all .right button {
+		width: 40px;
+	}
+	.main_break {
+		height: 50px;
+	}
+	.card .all .left .img img {
+		border: 1px solid #361A00;
+	}
+	.container {
+		padding: 0 10px;
+	}
+	.card .all .right {
+		width: 30%;
+		font-size: 14px;
+	}
+	.card .all .left {
+		width: 70%;
+	}
+	.card .all .left p {
+		font-size: 16px;
+	}
+	.main_title {
+		padding: 0 10px;
+		padding-top: 20px;;
+	}
+	.main_title .title {
+		font-size: 38px;
+	}
+	.main_title .desc {
+		font-size: 20px;
+	}
+}

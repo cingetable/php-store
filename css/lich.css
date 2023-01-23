@@ -1,0 +1,190 @@
+main {
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.main_title {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	padding: 20px 0 0;
+}
+.main_title .title {
+	font-size: 88px;
+	font-family: 'Monoton', cursive;
+}
+.main_title .desc {
+	font-family: 'Sevillana', cursive;
+	font-size: 31px;
+}
+.main_line {
+	margin-bottom: 20px;
+	margin-top: 20px;
+	width: 100vw;
+	background: #361A00;
+	height: 2px;
+}
+.edit {
+	padding: 20px 0;
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+}
+.form_in {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	width: 30%;
+	height: 400px;
+	padding: 0 0 50px;
+}
+.form_in .title {
+	font-size: 36px;
+}
+.form_in input {
+	width: 100%;
+	font-size: 31px;
+	background: #F0EDE9;
+	border-bottom: 1px solid black;
+}
+.form_btn {
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	height: 110px;
+	width: 30%;
+}
+.form_btn button {
+	height: 50px;
+	color: white;
+	background: #361A00;
+	border-radius: 50px;
+	width: 100%;
+	font-size: 28px;
+}
+.form_btn a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+	color: #361A00;
+	border-radius: 50px;
+	border: 1px solid #361A00;
+	width: 100%;
+}
+.form_btn a p {
+	font-size: 28px;
+}
+.admin {
+	cursor: pointer;
+	padding: 10px 0;
+	width: 30%;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: #361A00 1px solid;
+}
+.admin img {
+	width: 20px;
+	transition: width 0.5s;
+}
+.admin:hover img {
+	width: 25px;
+	transition: width 0.5s;
+}
+@media (max-width: 1680px) {
+	.form_btn {
+		width: 40%;
+	}
+	.form_in {
+		width: 40%;
+	}
+	.admin {
+		width: 40%;
+	}
+}
+@media (max-width: 1200px) {
+	.main_title .title {
+		font-size: 58px;
+		width: 60%;
+	}
+	.main_title .desc {
+		font-size: 27px;
+		width: 30%;
+	}
+	.form_btn {
+		width: 60%;
+	}
+	.form_in {
+		width: 60%;
+	}
+	.admin {
+		width: 60%;
+	}
+}
+@media (max-width: 992px) {
+	.main_title .title {
+		font-size: 50px;
+		width: 60%;
+	}
+	.main_title .desc {
+		font-size: 23px;
+		width: 30%;
+	}
+	.form_btn {
+		width: 70%;
+	}
+	.form_in {
+		width: 70%;
+	}
+	.admin {
+		width: 70%;
+	}
+}
+@media (max-width: 768px) {
+	.main_title {
+		padding: 0 10px;
+		padding-top: 20px;;
+	}
+	.main_title .title {
+		font-size: 38px;
+	}
+	.main_title .desc {
+		font-size: 20px;
+	}
+	.form_btn {
+		width: 80%;
+		height: 150px;
+	}
+	.form_btn button {
+		height: 65px;
+		font-size: 22px;
+	}
+	.form_btn a {
+		height: 65px;
+	}
+	.form_btn a p {
+		font-size: 22px;
+	}
+	.form_in {
+		width: 80%;
+		height: 300px;
+	}
+	.form_in input {
+		font-size: 20px;
+	}
+	.admin {
+		width: 80%;
+	}
+}

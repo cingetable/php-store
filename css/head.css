@@ -5,6 +5,11 @@ header {
 	border-bottom: 2px solid #361A00;
 	display: flex;
 	justify-content: center;
+	position: fixed;
+	background: #F0EDE9;
+}
+.mr {
+	height: 100px;
 }
 .header_container {
 	width: 100%;

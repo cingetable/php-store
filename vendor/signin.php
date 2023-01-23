@@ -1,34 +1,69 @@
 <?php
 
-    session_start();
-    require_once 'connect.php';
+session_start();
+require_once 'connect.php';
 
-    $login = $_POST['login'];
-    $password = md5($_POST['password']);
+$login = $_POST['login'];
+$password = $_POST['password'];
 
-    $check_user = mysqli_query($connect, "SELECT * FROM `users` WHERE `login` = '$login' AND `password` = '$password'");
-    if (mysqli_num_rows($check_user) > 0) {
+$error_fields = [];
 
-        $user = mysqli_fetch_assoc($check_user);
+if ($login === '') {
+    $error_fields[] = 'login';
+}
 
+if ($password === '') {
+    $error_fields[] = 'password';
+}
+
+if (!empty($error_fields)) {
+    $response = [
+        "status" => false,
+        "type" => 1,
+        "message" => "Проверьте правильность полей",
+        "fields" => $error_fields
+    ];
+
+    echo json_encode($response);
+
+}
+
+
+$check_user = mysqli_query($connect, "SELECT * FROM `users` WHERE `login` = '$login'");
+if (mysqli_num_rows($check_user) > 0) {
+    $user = mysqli_fetch_assoc($check_user);
+    if (!password_verify($_POST['password'], $user['password'])) {
+        $response = [
+            "status" => false,
+            "message" => "Неверный логин и пароль",
+        ];
+        echo json_encode($response);
+    } else {
         $_SESSION['user'] = [
             "id" => $user['id'],
-            "full_name" => $user['full_name'],
-            "avatar" => $user['avatar'],
-            "email" => $user['email']
+            "login" => $user['login'],
+            "password" => $_POST['password'],
+            "user_freedom" => $user['user_freedom'],
         ];
 
-        header('Location: ../index.php');
+        $response = [
+            "status" => true
+        ];
 
-    } else {
-        $_SESSION['message'] = 'Не верный логин или пароль';
-        header('Location: ../auth.php');
+        echo json_encode($response);
+
+
     }
-    ?>
 
-<pre>
-    <?php
-    print_r($check_user);
-    print_r($user);
-    ?>
-</pre>
+
+
+} else {
+
+    $response = [
+        "status" => false,
+        "message" => 'Не верный логин или пароль'
+    ];
+
+    echo json_encode($response);
+}
+?>

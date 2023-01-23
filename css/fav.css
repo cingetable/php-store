@@ -1,0 +1,231 @@
+main {
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.main_title {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	padding: 20px 0 0;
+}
+.main_title .title {
+	font-size: 88px;
+	font-family: 'Monoton', cursive;
+}
+.main_title .desc {
+	font-family: 'Sevillana', cursive;
+	font-size: 31px;
+}
+.main_break {
+	height: 100px;
+}
+.container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.card {
+	width: 100%;
+}
+.card .line {
+	width: 100%;
+	height: 2px;
+	background: #361A00;
+}
+.card .all {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-self: center;
+}
+.card .all .left, .card .all .right {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.card .all .left {
+	width: 40%;
+}
+.card .all .left input {
+	width: 30px;
+	height: 30px;
+}
+.card .all .left .img {
+	padding-left: 10px;
+	width: 40%;
+}
+.card .all .left .img img {
+	width: 100%;
+	border: 2px solid #361A00;
+	border-radius: 10px;
+}
+.card .all .left p {
+	align-self: flex-start;
+	font-size: 48px;
+	padding-left: 10px;
+}
+.card .all .right {
+	width: 30%;
+	font-size: 40px;
+}
+input[type=checkbox] {
+	visibility: hidden;
+}
+.check {
+	width: 28px;
+	height: 28px;
+	background: #F0EDE9;
+	border: #361A00 1px solid;
+	border-radius: 50px;
+	position: relative;
+}
+.check label {
+	cursor: pointer;
+	position: absolute;
+	width: 28px;
+	height: 28px;
+	
+	border-radius: 50px;
+	left: 0;
+	top: 0;
+	
+	background: #361A00;
+	opacity: 0;
+}
+.check label:after {
+	opacity: 0;
+	content: '';
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	background: #361A00;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+	top: 1px;
+	left: 1px;
+}
+.check label:hover::after {
+	opacity: 0.3;
+}
+.check input[type=checkbox]:checked + label {
+	opacity: 1;
+}
+.container button {
+	padding: 10px 0;
+	height: 50px;
+	color: white;
+	background: #361A00;
+	border-radius: 50px;
+	width: 25%;
+	font-size: 28px;
+	margin-bottom: 20px;
+}
+@media (max-width: 1680px) {
+	.container button {
+		width: 35%;
+	}
+	.card .all .left {
+		width: 50%;
+	}
+	.card .all .left p {
+		font-size: 40px;
+	}
+	.card .all .right {
+		font-size: 32px;
+	}
+}
+@media (max-width: 1200px) {
+	.main_break {
+		height: 80px;
+	}
+	.container button {
+		width: 40%;
+		font-size: 24px;
+	}
+	.main_title .title {
+		font-size: 58px;
+		width: 60%;
+	}
+	.main_title .desc {
+		font-size: 27px;
+		width: 30%;
+	}
+	.card .all .left {
+		width: 60%;
+	}
+	.card .all .left p {
+		font-size: 32px;
+	}
+	.card .all .right {
+		width: 30%;
+		font-size: 22px;
+	}
+}
+@media (max-width: 992px) {
+	.main_break {
+		height: 70px;
+	}
+	.container button {
+		width: 42%;
+		font-size: 22px;
+	}
+	.main_title .title {
+		font-size: 50px;
+		width: 60%;
+	}
+	.main_title .desc {
+		font-size: 23px;
+		width: 30%;
+	}
+}
+@media (max-width: 768px) {
+	.main_break {
+		height: 50px;
+	}
+	.container button {
+		width: 80%;
+		font-size: 16px;
+		height: 40px;
+	}
+	.card .all .left .img img {
+		border: 1px solid #361A00;
+	}
+	.container {
+		padding: 0 10px;
+	}
+	.card .all .right {
+		width: 30%;
+		font-size: 14px;
+	}
+	.card .all .left {
+		width: 70%;
+	}
+	.card .all .left p {
+		font-size: 16px;
+	}
+	.main_title {
+		padding: 0 10px;
+		padding-top: 20px;;
+	}
+	.main_title .title {
+		font-size: 38px;
+	}
+	.main_title .desc {
+		font-size: 20px;
+	}
+}
